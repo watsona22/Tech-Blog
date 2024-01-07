@@ -36,6 +36,28 @@ const delButtonHandler = async (event) => {
     }
   }
 };
+const comment = document.querySelector('#comments').value.trim();
+
+const submitCommentHandler = async (event) => {
+  if (event.target.hasAttribute('comment')) {
+    const id = event.target.getAttribute('comment');
+
+    const response = await fetch(`/api/blogs/${id}`, {
+      method: 'POST',
+      body: JSON.stringify({ comment }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert('Failed to add comment');
+    }
+  }
+};
+
 
 document
   .querySelector('.new-blog-form')
@@ -44,3 +66,7 @@ document
 document
   .querySelector('.blog-list')
   .addEventListener('click', delButtonHandler);
+
+document
+  .querySelector('.comment')
+  .addEventListener('click', submitCommentHandler);

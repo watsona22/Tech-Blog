@@ -8,7 +8,16 @@
     <span class="dollar-amount">{{format_amount needed_funding}}</span>
     needed
   </p> --}}
-  {{!-- <p>
-    <button class="btn btn-primary">Share your blog post</button>
-  </p> --}}
+  <form class="comment" method="post">
+    <div>
+      <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+      Leave a comment!
+      </textarea>
+    </div>
+    <button id="comment-id" class="btn btn-primary">Submit comment</button>
+    {{!-- <input type="submit" value="Submit Comment"> --}}
+  </form>
+  <p>
+
+  </p>
 </div>
