@@ -1,5 +1,7 @@
 # Tech-Blog
+The purpose of this project was to build an interactive web application. Tech Blog allows users to publish blog posts and comment on other developers' post as well. The dynamic components of our website are supported by JavaScript. The application will follow the MVC paradigm and it's architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. 
 
+The acceptance criteria were as follows: 
 GIVEN a CMS-style blog site
 WHEN I visit the site for the first time
 THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
@@ -33,3 +35,24 @@ WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view posts and comments but I am prompted to log in again before I can add, update, or delete posts
+
+This challenge utilized the node environment to create a program using dynamic Javascript. This project was a struggle,first to get the routes and handlebars to communicate, then to restructure the files such that Heroku could recognize and deploy the application(the latter still poses problems with the current structure of the working application). The main issue was insufficient knowldge concerning the interplay of express to create persistent routes and knowing where to look to diagnose issues. The error messages were less helpful this go around, mostly becuase the stacke report would point to query or node module issues with (in my opinion) minimal information. Debugging is still a struggle while juggling all the technologies. I will need much more practice using them to create and deploy applications. 
+
+## Usage
+
+The js file can be used to understand the dynamic code that supports the application. Here is a link to the deployed app for your reference: https://tech-blog-challenge-78d0ff8495f2.herokuapp.com/
+
+## Credits
+The project was completed with help from the course materials.
+
+## License
+
+MIT License
+Copyright (c) [2023] [Amber Watson]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+The application should have a db.json file on the back end that will be used to store and retrieve notes using the fs module.
